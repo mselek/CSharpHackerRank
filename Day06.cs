@@ -1,29 +1,40 @@
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Text.RegularExpressions;
-using System.Text;
 using System;
-
-
-
-class Solution
-{
-    public static void Main(string[] args)
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) 
     {
-        int n = Convert.ToInt32(Console.ReadLine().Trim());
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
         
-        for(int i = 1; i<= 10; i++)
+        int n = Convert.ToInt32(Console.ReadLine());
+        
+        for(int i = 0; i < n; i++)
         {
-            //Use string interpolation
-            Console.WriteLine($"{n} x {i} = {n*i}");
+            string s = Console.ReadLine();
+            LetsReview(s);
         }
+        
+        
     }
+    static void LetsReview(string s)
+        {
+            string evenStr = "";
+            string oddStr = "";
+            
+            for(int i = 0; i < s.Length; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    evenStr += s[i];
+                }
+                else
+                {
+                    oddStr += s[i];
+                }
+            }
+            
+            //Use string interpolation
+            Console.WriteLine($"{evenStr} {oddStr}");    
+        }
 }
+ 

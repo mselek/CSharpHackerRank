@@ -29,6 +29,5 @@ class Solution
               Console.Write("Not Weird");
           }
         
-        
     }
 }

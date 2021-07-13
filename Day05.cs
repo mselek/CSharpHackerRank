@@ -22,6 +22,7 @@ class Solution
         
         for(int i = 1; i<= 10; i++)
         {
+            //String interpolation method
             Console.WriteLine($"{n} x {i} = {n*i}");
         }
     }
